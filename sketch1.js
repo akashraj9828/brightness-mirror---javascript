@@ -16,7 +16,7 @@ var r
 
  var g
 var b
-var scl=50
+var scl=25
 function setup() {
   createCanvas(800, 800)
   video = createCapture(VIDEO)
