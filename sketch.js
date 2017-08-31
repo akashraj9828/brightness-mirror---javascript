@@ -1,7 +1,8 @@
-var video  //video elment variable
+"use strict";
+var video; //video elment variable
 
-var x   //X coordinate of pixel
-var y   //Y coordinate of pixel
+var x;   //X coordinate of pixel
+var y;   //Y coordinate of pixel
 
 var red;   //location for RED colour
 var green;  //location for GREEN colour
@@ -13,8 +14,13 @@ var g;  //value of GREEN
 var b;  //value of BLUE;
 var a;  //value of ALPHA
 
+var i = 0;
+var pixel = 0;
 
-var scl = 25   //max width of box 
+var w;  //width of box
+
+
+var scl = 25;   //max width of box 
 function setup() {
   createCanvas(800, 800);   //creates canvas of 800x800
   video = createCapture(VIDEO);   /// captures video
@@ -41,7 +47,7 @@ function draw() {
     r = video.pixels[red];     //value of red clr
     g = video.pixels[green];   //value of green clr  
     b = video.pixels[blue];    //value of blue clr
-   
+
     brightness = (r + g + b) / 3;       //tahkes mean of all colours to calculate brightness
     w = map(brightness, 0, 225, 7, scl);   //width of box 
     fill(brightness);         //fills box with average brightness of surrounding
