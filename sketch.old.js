@@ -45,7 +45,7 @@ function draw() {
   simm = dist(r, g, b, pixels[red], pixels[green], pixels[blue])  
   updatePixels()
 }
-}
+
 
 function mouseClicked() {
 getclr(mouseX, mouseY)

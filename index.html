@@ -1,13 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="images/favicon.png" sizes="16x16" type="image/png">
+    
+    
+    <meta name="author" content="Akash Raj">
+    <meta name="description" content="A weird mirror that shows weird stuff. Written in p5js">
+
+
+    <meta property="og:image" content="images/favicon.png">
+    <meta property="og:description" content="A weird mirror that shows weird stuff. Written in p5js">
+    <meta property="og:title" content="Weird Mirror">
+    
+    
+    <meta property="twitter:title" content="Weird Mirror">
+
+
+    <title>Weird mirror</title>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.min.js"></script> -->
     <script src="p5.min.js"></script>
-    <script src="addons/p5.dom.min.js"></script>
-    <script src="sketch.js"></script>
-    <script>
-      (function(){var script=document.createElement('script');script.onload=function(){var stats=new Stats();stats.domElement.style.cssText='position:fixed;left:0;top:0;z-index:10000';document.body.appendChild(stats.domElement);requestAnimationFrame(function loop(){stats.update();requestAnimationFrame(loop)});};script.src='stats.js';document.head.appendChild(script);})()
-      </script>
+    <style>
+      input[type="checkbox"] {
+        scale: 2
+      }
+
+      span {
+        font-size: 25px;
+      }
+
+      #random_btn {
+        font-size: 20px;
+        margin: 5px;
+        font-weight: 700;
+        border-radius: 4px;
+        background: khaki;
+      }
+    </style>
   </head>
-  <body>
+
+  <body style="background: black;color: white; text-align: center; overflow: hidden;">
+    <img style="margin: auto;" src="images/logo.png">
+    <br>
+    <span style="margin-right:10px"> <input type="checkbox" id="coloured"> Coloured </span>
+    <span style="margin-right:10px"> <input type="checkbox" id="crazy" checked> Go crazy </span>
+    <span style="margin-right:10px"> <input type="checkbox" id="jazz"> Jazz mode </span>
+    <span style="margin-right:10px"> <input type="checkbox" id="invert" checked> Invert </span>
+    <span style="margin-right:10px"> <input type="checkbox" id="circles" checked> Circles </span>
+    <span style="margin-right:10px">Weirdness slider: <input type="range" id="weird_slider" value=60></span>
+    <br>
+    <span style=""> <button type="button" id="random_btn" onclick="randomize()">Randomize</button></span>
+
   </body>
+  <script src="sketch.js"></script>
+  <script>
+    (function () { var script = document.createElement('script'); script.onload = function () { var stats = new Stats(); stats.domElement.style.cssText = 'position:fixed;left:0;top:0;z-index:10000'; document.body.appendChild(stats.domElement); requestAnimationFrame(function loop() { stats.update(); requestAnimationFrame(loop) }); }; script.src = 'stats.js'; document.head.appendChild(script); })()
+  </script>
+
 </html>
