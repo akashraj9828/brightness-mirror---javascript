@@ -124,21 +124,29 @@ function keyPressed() {
 
   if (key == 'p' || key == 'P') {
 
-    if (pause) {
-      loop()
-      pause = false;
-    } else {
-      noLoop()
-      pause = true;
-    }
-
+pause_play()
   }
   if (key == 's' || key == 'S') {
 
-    saveCanvas("weird mirror", 'png')
+    save_img()
 
   }
 
+}
+
+function save_img(){
+  saveCanvas("wtfun", 'png')
+}
+
+function pause_play(){
+  
+  if (pause) {
+    loop()
+    pause = false;
+  } else {
+    noLoop()
+    pause = true;
+  }
 }
 
 
